@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sevnce.yhlib.Util.ImageCycleView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/xlistview_cycle_image"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="false">
+
+</com.sevnce.yhlib.Util.ImageCycleView>

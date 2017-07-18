@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:clipToPadding="true"
+    android:orientation="vertical">
+
+    <!--<View
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_bar_height"
+        android:background="@color/colorPrimary" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_heght">
+
+        <ImageView
+            android:id="@+id/tv_left_operation"
+            android:layout_width="48dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/selector_white_for_color_primary"
+            android:padding="12dp"
+            android:src="@drawable/ic_arrow_back_dark_24dp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:text="@string/plugin_photo_pictrue"
+            android:textColor="@color/plugin_camera_white"
+            android:textSize="@dimen/plugin_camera_top_center_text_size" />
+
+        <TextView
+            android:id="@+id/tv_right_operation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_white_for_color_primary"
+            android:gravity="center"
+            android:minWidth="48dp"
+            android:paddingRight="5dp"
+            android:text="@string/plugin_photo_finish"
+            android:textColor="@color/plugin_camera_light_gray"
+            android:textSize="@dimen/plugin_camera_top_text_size"
+            android:visibility="visible" />
+    </RelativeLayout>
+</LinearLayout>

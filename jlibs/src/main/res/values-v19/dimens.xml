@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="status_bar_height">24dp</dimen>
+    <dimen name="title_bar_height">72dp</dimen>
+</resources>

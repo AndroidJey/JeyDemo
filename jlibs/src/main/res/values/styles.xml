@@ -1,0 +1,212 @@
+<resources>
+
+    <style name="BaseAppThemeLib" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!--窗口上顶撑满屏幕-->
+    <style name="AppThemeLib" parent="@style/BaseAppThemeLib"></style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="logindialogAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/head_in</item>
+        <item name="android:windowExitAnimation">@anim/head_out</item>
+    </style>
+
+    <!-- 圆角alert对话框 -->
+    <style name="DialogNoTitleRoundCornerStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/bg_toast</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+
+    <!-- 圆角alert对话框 -->
+    <style name="DialogTakePhotoReminderCornerStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/take_photo_standard_reminder_bg</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+
+    <!-- 日期时间alert对话框 -->
+    <style name="time_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="ListDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/bg_toast</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+        <item name="android:windowAnimationStyle">@style/ListDialogAnimationStyle</item>
+    </style>
+
+    <style name="ListDialogAnimationStyle">
+        <item name="android:windowEnterAnimation">@anim/abc_slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/abc_slide_out_bottom</item>
+    </style>
+
+
+    <style name="mostbiggestTextSize">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="biggestTextSize">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="biggerTextSize">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="NormalTextSize">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="smallTextSize">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="smallerTextSize">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="smallestTextSize">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="moreSmallestTextSize">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <!--<style name="DayTheme" parent="DayTheme">
+        <item name="colorValue">@color/gray_bg</item>
+        <item name="colorView">@color/white</item>
+        <item name="colorTitleText">@color/normal_text_color</item>
+        <item name="colorNomalText">@color/gray_text</item>
+    </style>
+
+    <style name="NightTheme" parent="NightTheme">
+        <item name="colorValue">@color/color_7</item>
+        <item name="colorView">@color/color_5</item>
+        <item name="colorTitleText">@color/white</item>
+        <item name="colorNomalText">@color/gray_text</item>
+    </style>-->
+
+    <style name="NumberProgressBar_Blue">
+
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:layout_width">match_parent</item>
+
+        <item name="progress_max">100</item>
+
+        <item name="progress_current">0</item>
+
+        <item name="progress_unreached_color">#CCCCCC</item>
+
+        <item name="progress_reached_color">#3498DB</item>
+
+        <item name="progress_text_size">10sp</item>
+
+        <item name="progress_text_color">#3498DB</item>
+
+        <item name="progress_reached_bar_height">2dp</item>
+
+        <item name="progress_unreached_bar_height">1dp</item>
+
+    </style>
+
+    <style name="SelectorNormalRectangleItem" parent="NormalTextSize">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="SelectorNormalCircleItem" parent="NormalTextSize">
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="dividerHorizontalWithoutMargin">
+        <item name="android:background">@color/shape_line</item>
+        <item name="android:layout_height">0.1dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="dividerVerticalWithoutMargin">
+        <item name="android:background">@color/shape_line</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0.1dp</item>
+    </style>
+
+    <style name="dividerVertical">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/shape_line</item>
+    </style>
+
+    <style name="NormalReminderDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/AnimationNormalReminderDialogStyle</item>
+        <item name="android:background">@drawable/bg_white_with_5_corners</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="AnimationNormalReminderDialogStyle">
+        <item name="android:windowEnterAnimation">@anim/head_in</item>
+        <item name="android:windowExitAnimation">@anim/head_out</item>
+    </style>
+
+    <!-- 百分号进度条 -->
+    <style name="numberProgressBar_Default">
+
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:layout_width">match_parent</item>
+
+        <item name="progress_max">100</item>
+
+        <item name="progress_current">0</item>
+
+        <item name="progress_unreached_color">#CCCCCC</item>
+
+        <item name="progress_reached_color">#3498DB</item>
+
+        <item name="progress_text_size">10sp</item>
+
+        <item name="progress_text_color">#3498DB</item>
+
+        <item name="progress_reached_bar_height">2dp</item>
+
+        <item name="progress_unreached_bar_height">1dp</item>
+
+    </style>
+
+
+</resources>

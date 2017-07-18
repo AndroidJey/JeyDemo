@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:ignore="ContentDescription,RtlHardcoded,NestedWeights,HardcodedText">
+
+    <LinearLayout
+        android:id="@+id/item_home_page_group4_container_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:minHeight="90dp">
+
+                <ImageView
+                    android:id="@+id/item_home_page_group4_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/image_default"/>
+
+                <ImageView
+                    android:id="@+id/item_home_page_group4_merch"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/image_default"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/item_home_page_group4_status_saled_tv"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@mipmap/image_default"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_home_page_group4_title_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:textColor="@color/normal_title_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/item_home_page_group4_year_and_mileage_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/normal_label_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/item_home_page_group4_max_money_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="center_vertical"
+                    android:textColor="#FF6633"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/item_home_page_group4_status_consign_tv"
+                        android:layout_width="40dp"
+                        android:layout_height="16dp"
+                        android:layout_marginRight="5dp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/item_home_page_group4_status_auction_tv1"
+                        android:layout_width="28dp"
+                        android:layout_height="16dp"
+                        android:layout_marginRight="5dp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/item_home_page_group4_status_report_tv"
+                        android:layout_width="28dp"
+                        android:layout_height="16dp"
+                        android:layout_marginRight="5dp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/item_home_page_group4_status_wholesale_tv"
+                        android:layout_width="28dp"
+                        android:layout_height="16dp"
+                        android:layout_marginRight="5dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/item_home_page_group4_price_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:textColor="@color/red"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_home_page_group4_status_auction_parent_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/normal_search_view_height"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="3"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/item_home_page_group4_status_bottom_divider"
+                    style="@style/dividerHorizontalWithoutMargin"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/item_home_page_group4_status_auction_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/normal_search_view_height"
+                    android:textColor="#00B94D"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View style="@style/dividerHorizontalWithoutMargin" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">@color/blue_login_press</color>
+    <color name="colorAccent">@color/blue_login_press</color>
+    <color name="home_page_search_transparent_white_color">#cfffffff</color>
+    <color name="redIcon">#F16226</color>
+    <color name="blackIcon">#1E1E1E</color>
+    <color name="bgPay">#EE5F1E</color>
+    <color name="btPay">#F57326</color>
+    <color name="title_black">#39393A</color>
+    <color name="blue_login_press">#4C87FF</color>
+    <color name="blue_login_bg">#00aaff</color>
+    <color name="black_app">#2C2C2C</color>
+    <color name="blue_time_line_already">#276FD8</color>
+    <color name="fragment_bg">#F2F2F2</color>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textandiconmargin">10dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">48dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="botoom_layout_normal_height">54dp</dimen>
+    <dimen name="main_menu_height">48dp</dimen>
+    <dimen name="normal_edit_text_height">40dp</dimen>
+    <dimen name="normal_search_view_height">30dp</dimen>
+    <dimen name="smaller_size">36dp</dimen>
+    <dimen name="bigger_size">60dp</dimen>
+    <dimen name="title_bar_to_right_margin">96dp</dimen>
+    <dimen name="normal_height">40dp</dimen>
+    <dimen name="image_cycle_normal_height">180dp</dimen>
+    <dimen name="image_cycle_bigger_height">200dp</dimen>
+    <dimen name="image_cycle_biggest_height">220dp</dimen>
+
+    <!-- 顶部栏两端的文字大小 -->
+    <dimen name="plugin_camera_top_text_size">16sp</dimen>
+    <!--顶部标题栏-->
+    <dimen name="plugin_camera_top_center_text_size">20sp</dimen>
+    <dimen name="ui_10_dp">1dp</dimen>
+    <dimen name="title_bar_heght">48dp</dimen>
+
+    <dimen name="normal_text_view_height">45dp</dimen>
+    <dimen name="bottom_normal_height">60dp</dimen>
+</resources>

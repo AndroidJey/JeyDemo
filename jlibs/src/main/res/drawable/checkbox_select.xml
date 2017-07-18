@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 设置选中图片 -->
+    <item android:drawable="@mipmap/plugin_camera_pic_selected" android:state_checked="true"/>
+    <!-- 设置未选中图片 -->
+    <item android:drawable="@mipmap/plugin_camera_pic_un_selected" android:state_checked="false"/>
+
+</selector>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#A50000</color>-->
+    <!--<color name="colorPrimaryDark">#A50000</color>-->
+    <!--<color name="colorPrimaryDarker">#800000</color>-->
+    <color name="colorPrimary">@color/status_bar_black_bg</color>
+    <color name="colorPrimaryDark">@color/status_bar_black_bg</color>
+    <color name="colorPrimaryDarker">@color/bg_pic_list</color>
+    <color name="colorAccent">#FE768D</color>
+    <color name="status_bar_color">@color/colorPrimaryDark</color>
+    <!--浅银色-->
+    <color name="lesssilver">#E8E8E8</color>
+    <color name="main_color_white">#ffffff</color>
+    <color name="loan_butBackground">#ed6d48</color>
+    <color name="orange">#ffa500</color>
+    <color name="whitesmoke">#f5f5f5</color>
+    <color name="window_bg">#fff0f3f6</color>
+    <color name="abc_search_url_text_normal">#ff7fa87f</color>
+    <color name="grey1f">#1f808080</color>
+
+    <item name="abc_search_url_text_selected" type="color">@*android:color/black</item>
+    <item name="abc_search_url_text_pressed" type="color">@*android:color/black</item>
+
+    <color name="gray_bg">#ffeeeeec</color>
+    <color name="gray_bg_2">#fff1f1f1</color>
+    <color name="normal_text_color">#1F1F1F</color>
+    <color name="gray_text">#808080</color>
+    <color name="gray_txt">#ffaaaaaa</color>
+    <color name="gray">#808080</color>
+    <color name="gray_deeper">#27ffffff</color>
+    <color name="text_field_pressed">#ffededed</color>
+    <color name="black">#ff000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="white_transparent">#27ffffff</color>
+    <color name="white_disable">#4dffffff</color>
+    <color name="blue">#ff3993cf</color>
+    <color name="blue_renren">#ff4caaf4</color>
+    <color name="blue_renren_pressed">#ff469ce0</color>
+    <color name="green">#ff5ab06c</color>
+    <color name="green_weixin">#ff42bd41</color>
+    <color name="green_weixin_pressed">#ff3cae3b</color>
+    <color name="green_weixin_co_order">#ff4db232</color>
+    <color name="red">#ffd7584a</color>
+    <color name="backColor">#2000</color>
+    <color name="red_dark">#ffa34238</color>
+    <color name="red_weibo">#fffa4c3d</color>
+    <color name="red_weibo_pressed">#ffe64638</color>
+    <color name="orange_ff">#ffff6000</color>
+    <color name="red_light">#ffcd423a</color>
+    <color name="blue_dark">#ff0c72a9</color>
+    <color name="blue_light">#ff3893cf</color>
+    <color name="green_dark">#ff25a044</color>
+    <color name="green_light">#ff4dc060</color>
+    <color name="grey_white">#ffd5d4d2</color>
+    <color name="grey_white_pressed">#ffcccccc</color>
+    <color name="grey">#ff616267</color>
+    <color name="grey_pressed">#ff525559</color>
+    <color name="grey_dark">#ff404850</color>
+    <color name="grey_dark_pressed">#ff363c43</color>
+    <color name="red_for_envelopes">#ffd8584a</color>
+    <color name="color_3">#ff333333</color>
+    <color name="color_4">#ff444444</color>
+    <color name="color_6">#ff666666</color>
+    <color name="color_7">#ff777777</color>
+    <color name="color_8">#ff888888</color>
+    <color name="color_9">#ff999999</color>
+    <color name="color_9a">#ff9a9a9a</color>
+    <color name="color_b">#ffbbbbbb</color>
+    <color name="color_d2">#ffd2d2d2</color>
+    <color name="color_f7">#fff7f7f7</color>
+    <color name="color_f6">#fff6f6f6</color>
+    <color name="color_f5">#fff5f5f5</color>
+    <color name="color_5">#ff555555</color>
+    <color name="color_ef">#ffefefef</color>
+    <color name="color_e">#ffeeeeee</color>
+    <color name="color_ec">#ffececec</color>
+    <color name="color_e9">#ffe9e9e9</color>
+    <color name="default_circle_indicator_fill_color">#ffffffff</color>
+    <color name="default_circle_indicator_page_color">#00000000</color>
+    <color name="default_circle_indicator_stroke_color">#ffdddddd</color>
+    <color name="menu_section_header">#FFDDDDDD</color>
+    <color name="button_selected">#ff419de4</color>
+    <color name="shape_line">#ffe5e5e5</color>
+    <!--<color name="shape_line">#ffcccccc</color>-->
+    <color name="trans_gray">#7f808080</color>
+
+    <color name="bg_pic_list">#232527</color>
+    <!--<color name="bg_pic_list_pressed">#131415</color>-->
+    <color name="bg_pic_list_pressed">#191919</color>
+    <color name="transparent2">#8000</color>
+    <color name="black_tranparent">#EF000000</color>
+    <color name="cycle_indicator_bg">#7F000000</color>
+    <color name="title_bg">#2A2B2B</color>
+    <color name="status_bar_white_bg">#bbbbbb</color>
+    <color name="status_bar_black_bg">#2A2B2B</color>
+
+    <color name="drawerBackGroun">#4B595A</color>
+    <color name="transparent">#00000000</color>
+    <color name="pressed_color">#1f000000</color>
+
+    <!-- 上传图片添加的颜色 -->
+    <color name="plugin_camera_black">#000000</color>
+    <color name="albumback">#E1E0DE</color>
+    <color name="plugin_camera_top_bar">#434147</color>
+    <color name="plugin_camera_white">#ffffff</color>
+    <color name="plugin_camera_light_gray">#E1E0DE</color>
+    <color name="none_color">#00000000</color>
+    <color name="divider_line_color">#9d9d9d</color>
+    <!-- 强调色-蓝色 -->
+    <color name="plugin_camera_emphasize_color">#12b7f5</color>
+    <!-- 70%透明 -->
+    <color name="transparent_background_70">#40000000</color>
+
+    <color name="image_view_default_bg_color">#d2d2d2</color>
+
+    <!--时间选择器-->
+    <color name="text1">#59B29C</color>
+    <color name="text2">#333333</color>
+    <color name="color1">#F0F0F0</color>
+    <color name="color2">#FFFFFF</color>
+    <color name="color3">#B0B0B0</color>
+    <color name="color4">#666666</color>
+    <color name="color5">#57C5E8</color>
+
+    <color name="lib_blue_login_press">#4C87FF</color>
+    <color name="lib_blue_login_bg">#378ded</color>
+
+    <color name="yellow_no_pressed_color">#ffa500</color>
+    <color name="yellow_pressed_color">#e98f36</color>
+
+    <color name="red_no_pressed_color">#ffff6000</color>
+    <color name="red_pressed_color">#ffd7584a</color>
+
+    <!-- 界面背景 -->
+    <color name="fragment_bg">#F2F2F2</color>
+    <color name="normal_brief_text_color">#999999</color>
+    <color name="normal_content_text_color">#191919</color>
+    <color name="normal_title_text_color">#333333</color>
+    <color name="normal_label_text_color">#555555</color>
+    <color name="normal_edit_hint_color">#CCCCCC</color>
+</resources>

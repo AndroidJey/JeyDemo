@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jey.jeydemo.activity.RefreshActivity">
+    <com.sevnce.yhlib.base.AsyLoadImage
+        android:id="@+id/imageHead"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/image_default"
+        android:scaleType="fitXY"/>
+    <com.jey.jeydemo.progressImagePlayer.ProgressImageView
+        android:id="@+id/imageProgress"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="fitXY"/>
+    <Button
+        android:id="@+id/btStartLoad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始加载图片"
+        android:layout_gravity="center_horizontal" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refreshSwipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.jey.jeydemo.view.NormalRecyclerView
+            android:id="@+id/refreshListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>
