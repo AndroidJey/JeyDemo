@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.jey.jeydemo.activity.RefreshActivity">
-    <com.sevnce.yhlib.base.AsyLoadImage
+    <ImageView
         android:id="@+id/imageHead"
         android:layout_width="100dp"
         android:layout_height="100dp"
