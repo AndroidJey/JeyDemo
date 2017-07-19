@@ -64,7 +64,7 @@ public class ToastUtil {
         View layout = LayoutInflater.from(context).inflate(R.layout.my_toast_layout, null);
         TextView text = (TextView) layout.findViewById(R.id.my_toast_title);
         text.setText(msg);
-        text.setTextColor(context.getResources().getColor(R.color.normal_label_text_color));
+        text.setTextColor(context.getResources().getColor(R.color.normal_title_text_color));
         toast = new Toast(context);
         toast.setGravity(Gravity.BOTTOM, 0, CommonFunction.dp2px(context, 80));
         toast.setDuration(Toast.LENGTH_SHORT);
