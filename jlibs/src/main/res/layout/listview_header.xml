@@ -27,8 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/xlistview_header_hint_normal"
-                android:textSize="16sp"
-                android:textColor="@color/gray_bg"/>
+                android:textSize="16sp"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -59,11 +58,11 @@
 
             <ImageView
                 android:id="@+id/listview_header_arrow"
-                android:layout_width="20dp"
+                android:layout_width="25dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="45dp"
                 android:layout_marginRight="10dp"
-                android:src="@mipmap/ic_xlistview_arrow" />
+                android:src="@drawable/ic_arrow_down_gray_24dp" />
 
             <com.jey.jlibs.view.XRecyclerView.SimpleViewSwitcher
                 android:id="@+id/listview_header_progressbar"
