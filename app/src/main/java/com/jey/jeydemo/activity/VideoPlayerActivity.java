@@ -3,6 +3,7 @@ package com.jey.jeydemo.activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.bumptech.glide.Glide;
 import com.jey.jeydemo.R;
 import com.jey.jeydemo.videoPlayer.JeyVideo.JeyVideoPlayer;
 import com.jey.jeydemo.videoPlayer.JeyVideo.JeyVideoPlayerStandard;
@@ -44,7 +45,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
         mJcVideoPlayerStandard = (JeyVideoPlayerStandard) findViewById(R.id.jc_video);
         mJcVideoPlayerStandard.setUp("http://v1.mukewang.com/a45016f4-08d6-4277-abe6-bcfd5244c201/L.mp4"
                 , JeyVideoPlayerStandard.SCREEN_LAYOUT_NORMAL, "嫂子别摸我~~~");
-        Picasso.with(this)
+        Glide.with(this)
                 .load("http://img4.jiecaojingxuan.com/2016/11/23/00b026e7-b830-4994-bc87-38f4033806a6.jpg@!640_360")
                 .into(mJcVideoPlayerStandard.thumbImageView);
     }
