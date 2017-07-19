@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 import com.example.jlibs.R;
 import com.jey.jlibs.adapter.AlbumGridViewAdapter;
+import com.jey.jlibs.utils.CommonFunction;
 import com.jey.jlibs.utils.PhotoSelectUtil.AlbumHelper;
 import com.jey.jlibs.utils.PhotoSelectUtil.Bimp;
 import com.jey.jlibs.utils.PhotoSelectUtil.FileUtils;
@@ -62,6 +63,7 @@ public class AlbumActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.plugin_camera_album);
+        CommonFunction.setStatusTransparent(this);
         PublicWay.activityList.add(this);
         // 注册一个广播，这个广播主要是用于在GalleryActivity进行预览时，防止当所有图片都删除完后，再回到该页面时被取消选中的图片仍处于选中状态
         IntentFilter filter = new IntentFilter("data.broadcast.action");
@@ -93,7 +95,6 @@ public class AlbumActivity extends AppCompatActivity {
         tvTitle.setText(getString(R.string.plugin_photo_pictrue));
         tvLeftOperation = (ImageView) findViewById(R.id.tv_left_operation);
         tvRightOperation = (TextView) findViewById(R.id.tv_right_operation);
-//        tvRightOperation.setTextColor(Util.getColorById(mContext, R.color.colorAccent));
         tvRightOperation.setTextColor(getResources().getColor(R.color.plugin_camera_emphasize_color));
         tvPreview = (TextView) findViewById(R.id.tv_preview);
         tvAlbum = (TextView) findViewById(R.id.tv_album);
@@ -320,7 +321,7 @@ public class AlbumActivity extends AppCompatActivity {
             tvPreview.setClickable(true);
             tvRightOperation.setClickable(true);
             tvRightOperation.setTextColor(getResources().getColor(R.color.plugin_camera_white));
-//            tvRightOperation.setTextColor(Util.getColorById(this, R.color.colorPrimary));
+            tvRightOperation.setVisibility(View.VISIBLE);
             tvPreview.setTextColor(Util.getColorById(this, R.color.colorPrimary));
         } else {
             tvRightOperation.setText(String.format(getString(R.string.plugin_photo_finish_format), Bimp.tempSelectBitmap.size() - Bimp.customPicCount, Bimp.max));
@@ -330,7 +331,7 @@ public class AlbumActivity extends AppCompatActivity {
 //            tvRightOperation.setPressed(false);
             tvRightOperation.setClickable(false);
             tvRightOperation.setTextColor(getResources().getColor(R.color.colorPrimary));
-//            tvRightOperation.setTextColor(Util.getColorById(this, R.color.divider_line_color));
+            tvRightOperation.setVisibility(View.INVISIBLE);
             tvPreview.setTextColor(Util.getColorById(this, R.color.plugin_camera_light_gray));
         }
     }

@@ -2,25 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorPrimary"
     android:clipToPadding="true"
     android:orientation="vertical">
 
-    <!--<View
+    <View
         android:id="@+id/status_bar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/status_bar_height"
-        android:background="@color/colorPrimary" />-->
+        android:background="@drawable/side_navbar_gray" />
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/title_bar_heght">
+        android:layout_height="@dimen/title_bar_heght"
+        android:background="@drawable/side_navbar_gray">
 
         <ImageView
+            style="@style/SelectorNormalRectangleItem"
             android:id="@+id/tv_left_operation"
             android:layout_width="48dp"
             android:layout_height="fill_parent"
-            android:background="@drawable/selector_white_for_color_primary"
             android:padding="12dp"
             android:src="@drawable/ic_arrow_back_dark_24dp" />
 
@@ -37,12 +37,12 @@
             android:textSize="@dimen/plugin_camera_top_center_text_size" />
 
         <TextView
+            style="@style/SelectorNormalRectangleItem"
             android:id="@+id/tv_right_operation"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:background="@drawable/selector_white_for_color_primary"
             android:gravity="center"
             android:minWidth="48dp"
             android:paddingRight="5dp"

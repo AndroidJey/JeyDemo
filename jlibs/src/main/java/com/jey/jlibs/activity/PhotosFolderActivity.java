@@ -12,12 +12,16 @@ import android.widget.TextView;
 
 import com.example.jlibs.R;
 import com.jey.jlibs.adapter.FolderAdapter;
+import com.jey.jlibs.utils.CommonFunction;
 import com.jey.jlibs.utils.PhotoSelectUtil.AlbumHelper;
 import com.jey.jlibs.utils.PhotoSelectUtil.ImageBucket;
 import com.jey.jlibs.utils.PhotoSelectUtil.PublicWay;
 
 import java.util.List;
 
+/**
+ * 系统相册列表
+ */
 public class PhotosFolderActivity extends AppCompatActivity {
     public static final int RESULT_CODE = 1;
 
@@ -25,6 +29,7 @@ public class PhotosFolderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty_photos_folder);
+        CommonFunction.setStatusTransparent(this);
         if (getActionBar() != null) {
             getActionBar().hide();
         }
