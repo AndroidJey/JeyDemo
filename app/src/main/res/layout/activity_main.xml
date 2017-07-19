@@ -30,62 +30,62 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <com.jey.jeydemo.view.AVLoadingIndicatorView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 custom:indicatorColor="@color/colorAccent"
                 custom:indicatorName="LineScale"
                 android:layout_centerInParent="true"/>
             <Button
                 android:id="@+id/btRecyclerView"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:text="normalrecyclerview列表"/>
             <Button
                 android:id="@+id/btStickHeader"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:text="吸顶效果"/>
             <Button
                 android:id="@+id/btOkHttp"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:text="OKHTTP"/>
             <Button
                 android:id="@+id/btRetrofit"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:text="Retrofit+RxJava+OkHttp电影列表"/>
             <Button
                 android:id="@+id/btVinScan"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:text="西部进出场记录列表"/>
             <Button
                 android:id="@+id/btChat"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:text="即时通讯"/>
             <Button
                 android:id="@+id/btRefresh"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:text="Refresh"/>
             <Button
                 android:id="@+id/btBottomTab"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:text="底部导航"/>
             <Button
                 android:id="@+id/btVideoPlayer"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:text="视频播放"/>
