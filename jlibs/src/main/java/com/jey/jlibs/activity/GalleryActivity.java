@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.jlibs.R;
+import com.jey.jlibs.utils.CommonFunction;
 import com.jey.jlibs.utils.PhotoSelectUtil.Bimp;
 import com.jey.jlibs.utils.PhotoSelectUtil.ImageItem;
 import com.jey.jlibs.utils.PhotoSelectUtil.PublicWay;
@@ -50,6 +51,7 @@ public class GalleryActivity extends AppCompatActivity { // 发送按钮
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.plugin_camera_gallery);// 切屏到主界面
+        CommonFunction.setStatusTransparent(this);
         PublicWay.activityList.add(this);
         ImageView ivBack = (ImageView) findViewById(R.id.tv_left_operation);
         btnFinish = (Button) findViewById(R.id.btn_finish);
