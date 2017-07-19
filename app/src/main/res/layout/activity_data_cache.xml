@@ -31,17 +31,19 @@
             android:layout_height="wrap_content"
             app:srlClassicsSpinnerStyle="FixedBehind"/>
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>-->
+    <include layout="@layout/titlebar"/>
+    <com.jey.jeydemo.view.NormalRecyclerView
+        android:id="@+id/page_home_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:overScrollFooter="@android:color/transparent"
+        android:overScrollHeader="@android:color/transparent"
+        android:overScrollMode="ifContentScrolls"
+        android:scrollbars="vertical" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="点我选择照片"
         android:id="@+id/button"/>
-    <com.jey.jeydemo.view.NormalRecyclerView
-        android:id="@+id/page_home_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:overScrollFooter="@android:color/transparent"
-        android:overScrollHeader="@android:color/transparent"
-        android:overScrollMode="ifContentScrolls"
-        android:scrollbars="vertical" />
 </LinearLayout>

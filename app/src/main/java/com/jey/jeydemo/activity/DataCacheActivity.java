@@ -5,7 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
+
 import com.jey.jlibs.activity.AlbumActivity;
+import com.jey.jlibs.utils.CommonFunction;
 import com.jey.jlibs.utils.PhotoSelectUtil.Bimp;
 import com.jey.jlibs.utils.ToastUtil;
 import com.jey.jeydemo.R;
@@ -22,11 +25,14 @@ public class DataCacheActivity extends AppCompatActivity {
     public NormalRecyclerView recyclerView;
     @BindView(R.id.button)
     public Button button;
+    @BindView(R.id.regoback)
+    public RelativeLayout regoback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_cache);
+        CommonFunction.setStatusTransparent(this);
         ButterKnife.bind(this);
         // 初始化控件
         initView();
@@ -65,6 +71,13 @@ public class DataCacheActivity extends AppCompatActivity {
         recyclerView.setSingleLayout(GateDataModel.class, R.layout.item_home_page_group4_rv,
                 new PageHomeGroup4RVHolder(this, 0));
         recyclerView.setAction("http://116.62.19.252/Client/Home/newCarListForHome.json");
+
+        regoback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     @OnClick({R.id.button})

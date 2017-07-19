@@ -183,6 +183,13 @@
         <item name="android:windowExitAnimation">@anim/head_out</item>
     </style>
 
+    <style name="AppTheme.Toolbar" parent="Widget.AppCompat.ActionBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
     <!-- 百分号进度条 -->
     <style name="numberProgressBar_Default">
 

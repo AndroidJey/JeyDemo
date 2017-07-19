@@ -21,7 +21,9 @@ import android.widget.FrameLayout;
 import android.widget.TabWidget;
 import android.widget.TextView;
 
-
+/**
+ * 消息数量显示UI
+ */
 public class BadgeView extends TextView {
 
 	public static final int POSITION_TOP_LEFT = 1;

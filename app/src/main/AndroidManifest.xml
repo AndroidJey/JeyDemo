@@ -111,7 +111,8 @@
             android:name="com.amap.api.v2.apikey"
             android:value="4952846f8bcff526c8db6e707515cd92" />
 
-        <activity android:name=".activity.DataCacheActivity"></activity>
+        <activity android:name=".activity.DataCacheActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
     </application>
 
 </manifest>
