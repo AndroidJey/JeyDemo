@@ -301,17 +301,16 @@ public class AsyHttp extends AsyncTask<String, Integer, Object> {
         try {
             HttpURLConnection conn;
             conn = getConnection();
-            conn.setReadTimeout(500 * 1000); // ������ʱ��
-            conn.setDoInput(true);// ��������
-            conn.setDoOutput(true);// ������
-            conn.setUseCaches(false); // ������ʹ�û���
+            conn.setReadTimeout(500 * 1000);
+            conn.setDoInput(true);
+            conn.setDoOutput(true);
+            conn.setUseCaches(false);
             conn.setRequestMethod("POST");
             conn.setRequestProperty("connection", "keep-alive");
             conn.setRequestProperty("Charsert", "UTF-8");
             conn.setRequestProperty("Content-Type", MULTIPART_FROM_DATA
                     + ";boundary=" + BOUNDARY);
 
-            // ������ƴ�ı����͵Ĳ���
             StringBuilder sb = new StringBuilder();
             for (Map.Entry<String, Object> entry : fields.entrySet()) {
                 sb.append(PREFIX);
@@ -330,10 +329,7 @@ public class AsyHttp extends AsyncTask<String, Integer, Object> {
             DataOutputStream outStream = new DataOutputStream(
                     conn.getOutputStream());
             outStream.write(sb.toString().getBytes());
-            // �����ļ�����
             if (files != null) {
-//                for (Object obj : files.values()) {
-//                }
                 for (Map.Entry<String, Object> kv : files.entrySet()) {
                     if (kv.getValue() instanceof File) {
                         putFile(outStream, (File) kv.getValue(), kv.getKey());
@@ -349,12 +345,9 @@ public class AsyHttp extends AsyncTask<String, Integer, Object> {
 
                 }
             }
-            // ���������־
             byte[] end_data = (PREFIX + BOUNDARY + PREFIX + LINEND).getBytes();
             outStream.write(end_data);
             outStream.flush();
-
-            // �õ���Ӧ��
             String result = "";
             if (conn.getResponseCode() == 200) {
                 result = CommonFunction.readData(conn.getInputStream(), "UTF-8");

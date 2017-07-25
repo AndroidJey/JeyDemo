@@ -8,12 +8,16 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.jey.jlibs.base.AsyHttp;
 import com.jey.jlibs.dataModel.BaseDataModel;
+import com.jey.jlibs.utils.CommonFunction;
 import com.jey.jlibs.utils.StringUtils;
 import com.jey.jlibs.view.XRecyclerView.HolderInterface;
 import com.jey.jeydemo.R;
 
 import java.util.Hashtable;
+import java.util.List;
 
 /**
  * 首页第4个GroupView中的RecyclerView的Holder
@@ -59,24 +63,13 @@ public class PageHomeGroup4RVHolder implements HolderInterface {
         if (o == null) return;
         BaseDataModel data = (BaseDataModel) o;
         if (data.getNameValues().size() == 0) return;
-        //MerchId
-        ImageView ivMerch = (ImageView) fields.get("merchId");
-        if (ivMerch != null) {
-            if (StringUtils.isEmpty(data.getValue("MerchId") + "")) {
-                ivMerch.setVisibility(View.GONE);
-            } else {
-                ivMerch.setVisibility(View.VISIBLE);
-            }
-        }
 
-//        WaterMarkImageView iv = (WaterMarkImageView) fields.get("IV");
-//        CommonFunctionUtils.holderShowPicture(utils, iv, data);
+        ImageView iv = (ImageView) fields.get("IV");
+        displayImageWithUrl(iv,data);
         ImageView tvSaled = (ImageView) fields.get("Saled");
         if (data.getValue("IsHaveSaled").toString().equals("true")) {
-//            iv.setShowFuzzyLayoutEnable(true);
             tvSaled.setVisibility(View.VISIBLE);
         } else {
-//            iv.setShowFuzzyLayoutEnable(false);
             tvSaled.setVisibility(View.GONE);
         }
         showViewAndVisible(fields, data);
@@ -173,29 +166,6 @@ public class PageHomeGroup4RVHolder implements HolderInterface {
                 auctionParentLL.setVisibility(View.VISIBLE);
                 tvAuction.setVisibility(View.VISIBLE);
                 tvAuction1.setVisibility(View.VISIBLE);
-
-                int isAuctioning = 0;
-                if (!StringUtils.isEmpty(data.getValue("Auctioning") + "")) {
-                    isAuctioning = (int) data.getValue("Auctioning");
-                }
-
-                String startTime = data.getValue("AuctionSessionStartTime") + "";
-                String endTime = data.getValue("AuctionSessionEndTime") + "";
-
-//                if (!StringUtils.isEmpty(startTime) && !StringUtils.isEmpty(endTime)) {
-//                    long compareWithSatrtTime = TimeUtil.calculateTimeDifferenceReturnSecond(startTime);
-//                    long compareWithEndTime = TimeUtil.calculateTimeDifferenceReturnSecond(endTime);
-//
-//                    if ((compareWithSatrtTime < 0 && compareWithEndTime > 0) && isAuctioning == 1) {
-//                        tvAuction.setText("正在拍卖  结束时间：" + TimeUtil.getMonthAndDayAndHourAndMinute(endTime));
-//                    } else if (compareWithSatrtTime > 0) {
-//                        tvAuction.setText("即将开始  开始时间：" + TimeUtil.getMonthAndDayAndHourAndMinute(startTime));
-//                    } else if (compareWithEndTime < 0) {
-//                        tvAuction.setText("拍卖已结束");
-//                    }
-//                } else {
-//                    tvAuction.setText("等待管理员安排拍卖场次");
-//                }
             }
             // 无拍卖
             else {
@@ -222,6 +192,33 @@ public class PageHomeGroup4RVHolder implements HolderInterface {
                 }
             }
         }
+    }
+
+    private void displayImageWithUrl(ImageView imageView, BaseDataModel data){
+        String url = "";
+        Object m = data.getValue("CarMessage");
+        if (!StringUtils.isEmpty(m + "") && (m + "").length() > 2) {
+            BaseDataModel o = (BaseDataModel) m;
+            if (o.getNameValues().size() > 0 && !StringUtils.isEmpty(o.getValue("Photos") + "")) {
+                List<BaseDataModel> d = (List<BaseDataModel>) o.getValue("Photos");
+                if (d.size() > 0) {
+                    url = d.get(0).getValue("PhotoUrl") + "";
+                }
+            }
+        }
+
+        if (url.startsWith("/") && !url.startsWith("/storage")) {
+            url = AsyHttp.Host + url;
+        }
+        imageView.setTag(R.id.image_tag, url);
+        if (imageView.getTag(R.id.image_tag) != null && url == imageView.getTag(R.id.image_tag))
+            Glide.with(context)
+                    .load(url)
+                    .crossFade()
+                    .centerCrop()
+                    .thumbnail(0.2f)
+                    .placeholder(R.mipmap.image_default)
+                    .into(imageView);
     }
 
 }

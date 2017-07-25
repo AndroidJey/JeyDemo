@@ -14,7 +14,8 @@ import com.jey.jlibs.utils.ToastUtil;
 import com.jey.jeydemo.R;
 import com.jey.jeydemo.datamodel.GateDataModel;
 import com.jey.jeydemo.holder.PageHomeGroup4RVHolder;
-import com.jey.jeydemo.view.NormalRecyclerView;
+import com.jey.jlibs.view.NormalRecyclerView;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

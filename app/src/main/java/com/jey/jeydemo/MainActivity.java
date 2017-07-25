@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements LocationUtils.OnR
 
         mLocationUtils.getLocation("重庆", "南岸区");//输入地址信息反编码得到经纬度
 
-        AsyHttp.Host = "http://116.62.34.34:8081";
+        AsyHttp.Host = "http://116.62.19.252:81";
         rangeBar = (RangeBar) findViewById(R.id.rangeBar);
 //        rangeBar.setBarColor(R.color.colorAccent);
         btRecyclerView = (Button) findViewById(R.id.btRecyclerView);

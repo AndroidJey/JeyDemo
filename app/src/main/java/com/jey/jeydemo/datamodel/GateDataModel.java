@@ -26,6 +26,35 @@ public class GateDataModel extends BaseDataModel {
             if (photo != null && this.getNameValues().containsValue(photo))
                 this.getNameValues().put("Gates", "");
         }
+
+        Object carMessage = this.getNameValues().get("CarMessage");
+        if (!StringUtils.isBlank(carMessage + "") && !StringUtils.isEmpty(carMessage + "") && (carMessage + "").length() > 2) {
+            if (carMessage instanceof JSONArray) {
+                parseJSONArray(GateDataModel.class, (JSONArray) carMessage, "CarMessage");
+            } else if (carMessage instanceof JSONObject) {
+                JSONObject jobj = (JSONObject) carMessage;
+                if (jobj.has("Guid")) {
+                    parseJSONObject(GateDataModel.class, (JSONObject) carMessage, "CarMessage");
+                } else {
+                    parseJSONObject(GateDataModel.class, (JSONObject) carMessage, "CarMessage");
+                }
+            }
+        } else {
+            if (carMessage != null && this.getNameValues().containsValue(carMessage))
+                this.getNameValues().put("CarMessage", "");
+        }
+
+        Object p = this.getNameValues().get("Photos");
+        if (!StringUtils.isBlank(p + "") && !StringUtils.isEmpty(p + "") && (p + "").length() > 2) {
+            if (p instanceof JSONArray) {
+                parseJSONArray(GateDataModel.class, (JSONArray) p, "Photos");
+            } else if (p instanceof JSONObject) {
+                parseJSONObject(GateDataModel.class, (JSONObject) p, "Photos");
+            }
+        } else {
+            if (p != null && this.getNameValues().containsValue(p))
+                this.getNameValues().put("Photos", "");
+        }
     }
 
     @Override
