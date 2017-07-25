@@ -96,9 +96,6 @@ public class PageHomeGroup4RVHolder implements HolderInterface {
             }
         }
 
-        TextView tvYearAndMileage = (TextView) fields.get("YearAndMileage");
-//        CommonFunctionUtils.holderShowMileageAndYear(tvYearAndMileage, data, "CarMileage", "FirstInstallCarNoTime");
-
         showReportStatus(data, fields);
     }
 
