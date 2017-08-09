@@ -13,6 +13,7 @@ import java.util.Map;
 
 /**
  * Created by jey on 2017/7/20.
+ * 写给爽姐的简单版网络请求
  */
 
 public class TestHttp extends AsyncTask<String, Integer, Object> {
