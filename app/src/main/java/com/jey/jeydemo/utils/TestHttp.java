@@ -18,6 +18,7 @@ import java.util.Map;
 public class TestHttp extends AsyncTask<String, Integer, Object> {
     private String url;
     public static String Host = "";
+    public  String ImageHost = "";
     private Map<String, Object> fields;//请求参数,键值对
     private Context context;
     private IPostBack postBack;
