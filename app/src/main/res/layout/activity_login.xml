@@ -39,6 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="220dp"
+                android:text="jey"
                 android:hint="用户名"/>
             <EditText
                 android:id="@+id/etLoginPassWord"

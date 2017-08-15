@@ -186,36 +186,7 @@ public class MainActivity extends AppCompatActivity implements LocationUtils.OnR
 
                     @Override
                     public void run() {
-//                        if (listView.getFirstVisiblePosition() == 0 && !isloading && haveMoreData) {
-//                            List<EMMessage> messages;
-//                            try {
-//                                if (chatType == EaseConstant.CHATTYPE_SINGLE) {
-//                                    messages = conversation.loadMoreMsgFromDB(messageList.getItem(0).getMsgId(),
-//                                            pagesize);
-//                                } else {
-//                                    messages = conversation.loadMoreMsgFromDB(messageList.getItem(0).getMsgId(),
-//                                            pagesize);
-//                                }
-//                            } catch (Exception e1) {
                         swipeRefreshLayout.setRefreshing(false);//停止刷新
-//                                return;
-//                            }
-//                            if (messages.size() > 0) {
-//                                messageList.refreshSeekTo(messages.size() - 1);
-//                                if (messages.size() != pagesize) {
-//                                    haveMoreData = false;
-//                                }
-//                            } else {
-//                                haveMoreData = false;
-//                            }
-//
-//                            isloading = false;
-//
-//                        } else {
-//                            Toast.makeText(getActivity(), getResources().getString(R.string.no_more_messages),
-//                                    Toast.LENGTH_SHORT).show();
-//                        }
-//                        swipeRefreshLayout.setRefreshing(false);
                     }
                 }, 6000);
             }

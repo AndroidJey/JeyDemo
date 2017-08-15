@@ -31,12 +31,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:layout_gravity="center_horizontal"
         android:paddingBottom="10dip"
         android:paddingLeft="20dip"
         android:paddingRight="20dip"
         android:paddingTop="10dip"
         android:text="正在加载"
-        android:textColor="@android:color/white"
+        android:textColor="@color/normal_title_text_color"
         android:textSize="16sp" />
 
 </LinearLayout>

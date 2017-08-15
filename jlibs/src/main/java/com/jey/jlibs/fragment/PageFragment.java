@@ -18,6 +18,8 @@ import com.jey.jlibs.utils.DialogMaker;
 import com.jey.jlibs.utils.StringUtils;
 import com.jey.jlibs.utils.ToastUtil;
 
+import butterknife.ButterKnife;
+
 public abstract class PageFragment extends Fragment {
     ViewGroup container;
     public View view;
@@ -36,6 +38,7 @@ public abstract class PageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         this.container = container;
         view = inflater.inflate(setLayoutId(), container, false);
+        ButterKnife.bind(this,view);
         initViews();
         return view;
     }

@@ -101,6 +101,7 @@ public class ChatMainFragment extends PageFragment {
      * 退出登录
      */
     private void logOut(){
+        showWaitDialog("正在退出...",true,null);
         EMClient.getInstance().logout(true, new EMCallBack() {
 
             @Override
@@ -108,6 +109,7 @@ public class ChatMainFragment extends PageFragment {
                 // TODO Auto-generated method stub
                 Message message = handler.obtainMessage(1, "");
                 handler.sendMessage(message);
+                dismissDialog();
             }
 
             @Override
@@ -121,6 +123,7 @@ public class ChatMainFragment extends PageFragment {
                 // TODO Auto-generated method stub
                 Message message1 = handler.obtainMessage(2, message);
                 handler.sendMessage(message1);
+                dismissDialog();
             }
         });
     }
