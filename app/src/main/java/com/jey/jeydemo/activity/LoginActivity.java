@@ -47,7 +47,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         tvRegist = (TextView) findViewById(R.id.tvRegist);
         etLoginUserName = (EditText) findViewById(R.id.etLoginUserName);
         etLoginPassWord = (EditText) findViewById(R.id.etLoginPassWord);
-        utils = new CommonFunctionUtils(getApplicationContext());
+        utils = new CommonFunctionUtils(this);
 
         logo = (ImageView) findViewById(R.id.logo);
         content = findViewById(R.id.content);
@@ -80,29 +80,29 @@ public class LoginActivity extends Activity implements View.OnClickListener {
             return;
         }
         utils.showWaitDialog("正在登录...",true,null);
-//        EMClient.getInstance().login(username,password,new EMCallBack() {//回调
-//            @Override
-//            public void onSuccess() {
-//                utils.dismissDialog();
-//                EMClient.getInstance().groupManager().loadAllGroups();
-//                EMClient.getInstance().chatManager().loadAllConversations();
-//                Message message = handler.obtainMessage(1, "");
-//                handler.sendMessage(message);
-//            }
-//
-//            @Override
-//            public void onProgress(int progress, String status) {
-//
-//            }
-//
-//            @Override
-//            public void onError(int code, String message) {
-//                utils.dismissDialog();
-//                Log.e("msgg",message);
-//                Message message1 = handler.obtainMessage(2, message);
-//                handler.sendMessage(message1);
-//            }
-//        });
+        EMClient.getInstance().login(username,password,new EMCallBack() {//回调
+            @Override
+            public void onSuccess() {
+                utils.dismissDialog();
+                EMClient.getInstance().groupManager().loadAllGroups();
+                EMClient.getInstance().chatManager().loadAllConversations();
+                Message message = handler.obtainMessage(1, "");
+                handler.sendMessage(message);
+            }
+
+            @Override
+            public void onProgress(int progress, String status) {
+
+            }
+
+            @Override
+            public void onError(int code, String message) {
+                utils.dismissDialog();
+                Log.e("msgg",message);
+                Message message1 = handler.obtainMessage(2, message);
+                handler.sendMessage(message1);
+            }
+        });
     }
 
     private Handler handler = new Handler(){
