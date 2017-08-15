@@ -2,6 +2,7 @@ package com.jey.jeydemo.movie;
 
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -14,17 +15,22 @@ import com.jey.jeydemo.http.Fault;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import rx.functions.Action1;
 
-public class MovieActivity extends AppCompatActivity implements View.OnClickListener{
+public class MovieActivity extends AppCompatActivity implements View.OnClickListener, SwipeRefreshLayout.OnRefreshListener{
     private MovieLoader mMovieLoader;
     private RecyclerView mRecyclerView;
     private MovieAdapter mMovieAdapter;
+    @BindView(R.id.swipeRefreshMovie)
+    SwipeRefreshLayout swipeRefreshMovie;
     public static final String BASE_URL = "https://api.douban.com/v2/movie/";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie);
+        ButterKnife.bind(this);
         mMovieLoader = new MovieLoader();
         initView();
     }
@@ -45,6 +51,7 @@ public class MovieActivity extends AppCompatActivity implements View.OnClickList
         mRecyclerView.setLayoutManager(manager);
         mMovieAdapter = new MovieAdapter();
         mRecyclerView.setAdapter(mMovieAdapter);
+        swipeRefreshMovie.setOnRefreshListener(this);
         getMovieList();
 
     }
@@ -56,8 +63,8 @@ public class MovieActivity extends AppCompatActivity implements View.OnClickList
         mMovieLoader.getMovie(0,10).subscribe(new Action1<Object>() {
             @Override
             public void call(Object movies) {
-//                mMovieAdapter.setMovies(movies);
-                mMovieAdapter.notifyDataSetChanged();
+                mMovieAdapter.setMovies((List<Movie>) movies);
+                swipeRefreshMovie.setRefreshing(false);
             }
         }, new Action1<Throwable>() {
             @Override
@@ -82,6 +89,11 @@ public class MovieActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         //getMovieRx();
+    }
+
+    @Override
+    public void onRefresh() {
+        getMovieList();
     }
 
     public static class MovieDecoration extends RecyclerView.ItemDecoration{

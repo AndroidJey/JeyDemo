@@ -22,6 +22,7 @@ public class MovieAdapter extends RecyclerView.Adapter {
 
     public void setMovies(List<Movie> movies) {
         mMovies = movies;
+        this.notifyDataSetChanged();
     }
 
     @Override
