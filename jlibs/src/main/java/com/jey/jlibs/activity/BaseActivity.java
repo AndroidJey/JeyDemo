@@ -163,10 +163,10 @@ public class BaseActivity extends AppCompatActivity {
     private void exitApp() {
         // 判断2次点击事件时间
         if ((System.currentTimeMillis() - exitTime) > 2000) {
-            ToastUtil.show(BaseActivity.this, "再按一次退出汽车城OCR扫码");
+            ToastUtil.show(BaseActivity.this, "再按一次退出应用");
             exitTime = System.currentTimeMillis();
         } else {
-            android.os.Process.killProcess(android.os.Process.myPid());
+//            android.os.Process.killProcess(android.os.Process.myPid());//退出应用主进程
             finish();
         }
     }
