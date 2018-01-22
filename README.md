@@ -1,2 +1,1 @@
-# 这个项目是我平时测试UI,http,缓存,即时通讯等做的一个测试demo.
-没有界面可言,纯粹的练手项目
+ this demo contains some widgit and SDK tools from many online project. for collection to Jey
